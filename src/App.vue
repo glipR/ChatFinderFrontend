@@ -18,7 +18,7 @@
       <v-spacer></v-spacer>
 
       <v-btn
-        href="https://github.com/glipR/ChatFinder"
+        href="https://github.com/glipR/ChatFinderFrontend"
         target="_blank"
         text
       >
@@ -56,7 +56,7 @@
                     <v-card-text>
                       Since I don't want to clutter this list, Universities are added by me personally.
                       
-                      To add your university to ChatFinder, please send an Issue <a href="https://github.com/glipR/ChatFinder/issues" target="_blank">here</a>.
+                      To add your university to ChatFinder, please send an Issue <a href="https://github.com/glipR/ChatFinderFrontend/issues" target="_blank">here</a>.
                     </v-card-text>
                     <v-card-actions class="justify-end">
                       <v-btn
