@@ -129,7 +129,7 @@
                 :items="chat_code_options"
                 item-text="show_name"
                 item-value="id"
-                prepend-icon="mdi-account-school"
+                prepend-icon="mdi-book-open-page-variant"
               ></v-autocomplete>
             </div>
           </v-col>
