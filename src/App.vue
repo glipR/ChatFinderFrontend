@@ -325,7 +325,7 @@ export default {
   methods: {
     updateUniversityList: function() {
       this.total_loading = true;
-      axios.get('http://127.0.0.1:8000/api/universities/')
+      axios.get('https://chat-finder-backend.herokuapp.com/api/universities/')
         .then( response => {
           this.uni_options = response.data;
           this.total_loading = false;
@@ -333,7 +333,7 @@ export default {
     },
     updateChatCodeList: function() {
       this.uni_loading = true;
-      axios.get(`http://127.0.0.1:8000/api/chat_codes/${this.university}/`)
+      axios.get(`https://chat-finder-backend.herokuapp.com/api/chat_codes/${this.university}/`)
         .then(response => {
           this.chat_code_options = response.data;
           this.uni_loading = false;
@@ -341,14 +341,14 @@ export default {
     },
     updateChatList: function() {
       this.chat_code_loading = true;
-      axios.get(`http://127.0.0.1:8000/api/chats/${this.chat_code}/`)
+      axios.get(`https://chat-finder-backend.herokuapp.com/api/chats/${this.chat_code}/`)
         .then(response => {
           this.chats = response.data;
           this.chat_code_loading = false;
         })
     },
     createUnitCode: function() {
-      axios.post(`http://127.0.0.1:8000/api/chat_codes/${this.university}/`, {
+      axios.post(`https://chat-finder-backend.herokuapp.com/api/chat_codes/${this.university}/`, {
         "show_name": this.chat_code_name,
         "university": this.university
       }).then(() => {
@@ -360,7 +360,7 @@ export default {
       })
     },
     createChat: function() {
-      axios.post(`http://127.0.0.1:8000/api/chats/${this.chat_code}/`, {
+      axios.post(`https://chat-finder-backend.herokuapp.com/api/chats/${this.chat_code}/`, {
         "show_name": this.chat_name,
         "group_type": this.group_type,
         "group_link": this.group_link,
