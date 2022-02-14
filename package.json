@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "vue-cli-service serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "preinstall": "npm i -g @vue/cli @vue/cli-service-global"
+    "postinstall": "npm run build"
   },
   "dependencies": {
     "axios": "^0.26.0",

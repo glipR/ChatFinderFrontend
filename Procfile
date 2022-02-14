@@ -1,1 +1,1 @@
-web: yarn run preinstall && yarn run serve
+web: npm start
