@@ -29,7 +29,7 @@
                 <a target="_blank" :href="chat.group_link">{{chat.group_link}}</a>
             </v-card-text>
             <v-card-text v-show="chat.group_type == 'facebook'">
-                Click the link below to join the Facebook group chat.<br>
+                Click the link below to ask to be added to the Facebook group chat.<br>
                 <a target="_blank" :href="chat.group_link">{{chat.group_link}}</a>
             </v-card-text>
             <v-card-text v-show="chat.group_type == 'facebook'">

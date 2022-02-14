@@ -182,10 +182,6 @@
                       <v-card-text>
                           <v-container>
                             <v-row>
-                              <v-col cols="12" md="12">
-                                <a href="https://smartphones.gadgethacks.com/how-to/invite-people-messenger-group-chats-with-link-so-they-can-join-right-away-wait-approval-0183625/" target="_blank">Creating a facebook group chat link</a><br>
-                                <a href="https://www.alphr.com/discord-create-invite-link/" target="_blank">Creating a discord server link</a>
-                              </v-col>
                               <v-col cols="12" md="4">
                                 <v-text-field
                                   v-model="chat_name"
@@ -221,13 +217,19 @@
                                 </v-select>
                               </v-col>
                               <v-col cols="12" md="4">
-                                <v-text-field
-                                  v-model="group_link"
-                                  :rules="group_link_rules"
-                                  label="Group Link?"
-                                  required
-                                >
-                                </v-text-field>
+                                <v-tooltip top>
+                                  <template v-slot:activator="{ on, attrs }">
+                                    <v-text-field
+                                      v-model="group_link"
+                                      :rules="group_link_rules"
+                                      label="Group Link?"
+                                      v-bind="attrs"
+                                      v-on="on"
+                                      required
+                                    ></v-text-field>
+                                  </template>
+                                  <span>Facebook doesn't have a nice link system, so just link your profile so people can message you for access.</span>
+                                </v-tooltip>
                               </v-col>
                               <v-col cols="12" md="4">
                                 <v-text-field
